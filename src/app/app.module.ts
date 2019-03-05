@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,15 +18,19 @@ import { HomeComponent } from './home/home.component';
     NavComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule, MatButtonModule, MatCheckboxModule
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

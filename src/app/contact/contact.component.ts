@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   messageForm: FormGroup;
   submitted = false;
   success = false;
+  something = true;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -25,11 +26,16 @@ export class ContactComponent implements OnInit {
     this.submitted = true;
 
     if (this.messageForm.invalid) {
+        this.something = false;
         return;
     }
-
+    this.something = true;
     this.success = true;
+    
 }
+
+
+
 
 }
 

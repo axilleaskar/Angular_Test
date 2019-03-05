@@ -1,5 +1,17 @@
-<h1 [ngClass]="{
-  'gray': h1Style,
-  'large': !h1Style }">Home</h1>
 
-<button (click)= "firstClick()">Click Ne</button>
+<h1>Users</h1>
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
+<h1 *ngIf="isShowing">ΚΑΤΙ</h1>
+
+
+<mat-checkbox [checked]="isShowing">Axilleas</mat-checkbox> <br>
+
+
+
+<button class="koubi" (click)="firstClick()">Press The Button</button>
+

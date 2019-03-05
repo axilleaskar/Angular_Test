@@ -6,7 +6,7 @@
 
     <label>
       Name:
-      <input type="text" formControlName="name">
+      <input type="text" formControlName="name" class="name" [style.border]="something ? '1px solid #ccc' : '1px solid #f00'">
       <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
         <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
       </div>
@@ -25,9 +25,9 @@
   </form>
 
   <div *ngIf="submitted" class="results">
-    <strong>Name:</strong> 
-    <span>{{ messageForm.controls.name.value }}</span>
+    <strong>Name: </strong> 
+    <span>{{ messageForm.controls.name.value }}</span><br>
 
-    <strong>Message:</strong> 
+    <strong>Message: </strong> 
     <span>{{ messageForm.controls.message.value }}</span>
   </div>
